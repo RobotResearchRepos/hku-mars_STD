@@ -10,7 +10,7 @@ RUN apt-get update \
 RUN apt-get update \
  && apt-get install -y libgoogle-glog-dev libgflags-dev \
       libatlas-base-dev libeigen3-dev libsuitesparse-dev \
-      ros-noetic-pcl-conversion \
+      ros-noetic-pcl-conversions \
  && rm -rf /var/lib/apt/lists/*
 
 # Source code dependencies
