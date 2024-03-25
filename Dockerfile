@@ -19,6 +19,10 @@ RUN git clone https://ceres-solver.googlesource.com/ceres-solver \
  && cmake .. && make install && cd .. && rm -fr ceres-solver
 
 # PPA and apt packages
+RUN apt-get update \
+ && apt-get install -y software-properties-common \
+ && rm -rf /var/lib/apt/lists/*
+ 
 RUN add-apt-repository ppa:borglab/gtsam-release-4.0 \
  && apt-get update \
  && apt-get install -y libgtsam-dev libgtsam-unstable-dev \
